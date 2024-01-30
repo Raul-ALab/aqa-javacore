@@ -6,11 +6,13 @@ public class CheckSum {
     что их сумма лежит в пределах от 10 до 20 (включительно),
     если да – вернуть true, в противном случае – false. */
     public boolean checkRangeOfSum() {
+        System.out.print("Enter 1st int value: ");
         int a = GetInput.scan();
+        System.out.print("Enter 2nd int value: ");
         int b = GetInput.scan();
-        int sum = a + b;
 
-        boolean result = sum >= 10 && sum <= 20;
+        int sum = a + b;
+        boolean result = (sum >= 10 && sum <= 20) ? true : false;
 
         return result;
     }

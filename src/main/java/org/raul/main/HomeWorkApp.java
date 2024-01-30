@@ -1,15 +1,13 @@
 package org.raul.main;
 
-import org.raul.lesson_1.BasicOperations;
+
+import org.raul.lesson_2.CheckSum;
 
 class HomeWorkApp {
     public static void main(String[] args) {
+        CheckSum sum = new CheckSum();
 
-        BasicOperations bo = new BasicOperations();
 
-//        bo.printThreeWords();
-//        bo.checkSumSign();
-//        bo.printColor();
-//        bo.compareNumbers();
+        System.out.println(sum.checkRangeOfSum());
     }
 }
