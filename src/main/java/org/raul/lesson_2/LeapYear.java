@@ -1,5 +1,7 @@
 package org.raul.lesson_2;
 
+import org.raul.lesson_2.utils.GetInput;
+
 public class LeapYear {
 
     /* (*)Написать метод, который определяет, является ли год високосным,

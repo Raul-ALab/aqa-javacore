@@ -6,8 +6,11 @@ public class IterateString {
     строка и число, метод должен отпечатать в консоль указанную
     строку, указанное количество раз. */
     public static void iterateStringByNumber(String word, int num) {
-        for (int i = 1; i <= num; i++) {
+        int i = 1;
+
+        while (i <= num) {
             System.out.println(i + ". " + word);
+            i++;
         }
     }
 }
