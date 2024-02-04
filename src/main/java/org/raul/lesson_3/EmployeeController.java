@@ -6,7 +6,9 @@ public class EmployeeController {
     сотрудниках старше 40 лет. */
     public static void retrieveByAge(Employee[] employees, int ageGreater) {
         for (Employee emp : employees) {
-            if (!(emp.getAge() < ageGreater)) {
+            /* Рауль: поскольку это не было четко указано в требованиях, я изменил его чтобы 
+            включить возрастной предел с учетом обсуждения в Skype.*/
+            if (!(emp.getAge() <= ageGreater)) {
                 emp.employeeDetailsToConsole();
             }
         }
