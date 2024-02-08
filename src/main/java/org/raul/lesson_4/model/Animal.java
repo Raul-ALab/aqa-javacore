@@ -1,14 +1,26 @@
 package org.raul.lesson_4.model;
 
-abstract class Animal {
-
+/* 1.Создать классы Собака и Кот с наследованием
+от класса Животное.*/
+public abstract class Animal {
     private String name;
+    protected int runningThreshold;
+    protected int swimmingThreshold;
 
-    public Animal(){
+    /* 4.* Добавить подсчет созданных котов, собак и животных. */
+    private static int instanceCountAnimal = 0;
+
+    public Animal() {
+        instanceCountAnimal++;
     }
 
     public Animal(String name) {
+        this(); // Sharing instance count for animal with other constructors
         this.name = name;
+    }
+
+    public static int getInstanceCountAnimal() {
+        return instanceCountAnimal;
     }
 
     public String getName() {
@@ -19,11 +31,30 @@ abstract class Animal {
         this.name = name;
     }
 
-    public abstract void run();
+    public int getRunningThreshold() {
+        return runningThreshold;
+    }
 
-    public abstract void swim();
+    public int getSwimmingThreshold() {
+        return swimmingThreshold;
+    }
 
-    public String displayClassType() {
-        return "I am a " + this.getClass().getSimpleName().toLowerCase();
+    public abstract void swim(int distanceMeters);
+
+    public void run(int distanceMeters) {
+        if (distanceMeters <= 0) {
+            System.out.println("The distance shouldn't be zero or negative!");
+            return;
+        }
+
+        if (distanceMeters > runningThreshold) {
+            System.out.println("Warning: " + displayAnimalType() + "'s run capacity is up to " + runningThreshold + " meters.");
+        } else {
+            System.out.println(displayAnimalType() + " " + getName() + " ran " + distanceMeters + "m.");
+        }
+    }
+
+    public String displayAnimalType() {
+        return this.getClass().getSimpleName().toLowerCase();
     }
 }
