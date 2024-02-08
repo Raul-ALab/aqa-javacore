@@ -1,22 +1,31 @@
 package org.raul.lesson_4.model;
 
+import org.raul.lesson_4.utils.Plate;
+
 public class Cat extends Animal {
     private static int instanceCountCat = 0;
     private int hunger;
+    private boolean isSatiate = false;
 
-    public Cat() {
-        super(); // superclass default constructor to count instances separately
-        instanceCountCat++;
-    }
-
-    public Cat(String name) {
+    /* 5.2.a.Каждому коту нужно добавить поле сытость
+    (когда создаем котов, они голодны).*/
+    public Cat(String name, int hunger) {
         super(name);
+        this.hunger = hunger;
         instanceCountCat++; /* Couldn't use this() here because both
         super and this should be first. */
     }
 
     public static int getInstanceCountCat() {
         return instanceCountCat;
+    }
+
+    public int getHunger() {
+        return hunger;
+    }
+
+    public boolean isSatiate() {
+        return isSatiate;
     }
 
     @Override
@@ -38,10 +47,17 @@ public class Cat extends Animal {
     @Override
     public void swim(int distanceMeters) {
         swimmingThreshold = 0;
-        System.out.println("I am a " + displayAnimalType() + "\uD83D\uDC31 and I hate swimming.");
+        System.out.println("I am a " + displayAnimalType() + "\uD83D\uDC31 and I hate swimming :/");
     }
 
-/*    public void eat(Bowl bowl) {
-        bowl.feedConsumption(hunger);
-    }*/
+    public void eat(Plate plate) {
+        System.out.println("Plate: " + plate.getFeed());
+
+        /* 5.2.b.Если коту удалось покушать (хватило еды),
+        сытость = true. */
+        if (plate.getFeed() >= hunger) {
+            isSatiate = true;
+        }
+        plate.feedConsumption(hunger);
+    }
 }
