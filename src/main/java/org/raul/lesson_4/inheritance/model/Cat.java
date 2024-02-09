@@ -2,6 +2,8 @@ package org.raul.lesson_4.inheritance.model;
 
 import org.raul.lesson_4.inheritance.utils.Plate;
 
+/* 1.Создать классы Собака и Кот с наследованием
+от класса Животное.*/
 public class Cat extends Animal {
     private static int instanceCountCat = 0;
     private int hunger;
@@ -30,6 +32,8 @@ public class Cat extends Animal {
 
     @Override
     public void run(int distanceMeters) {
+        /* 3.У каждого животного есть
+        ограничения на действия.*/
         runningThreshold = 200;
 
         if (distanceMeters <= 0) {
@@ -46,6 +50,8 @@ public class Cat extends Animal {
 
     @Override
     public void swim(int distanceMeters) {
+        /* 3.У каждого животного есть ограничения
+        на действия - кот не умеет плавать.*/
         swimmingThreshold = 0;
         System.out.println("I am a " + displayAnimalType() + "\uD83D\uDC31 and I hate swimming :/");
     }

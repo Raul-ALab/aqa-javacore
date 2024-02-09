@@ -1,5 +1,6 @@
 package org.raul.lesson_4.nestedclasses;
 
+/*This class handles business logic for shopping processes.*/
 class PaymentService {
     public static void shoppingCart(Payment payment, String item, float price) {
         Payment.Shopping shopping = payment.new Shopping(item, price);

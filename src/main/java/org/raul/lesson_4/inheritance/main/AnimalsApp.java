@@ -1,5 +1,8 @@
 package org.raul.lesson_4.inheritance.main;
 
+import org.raul.lesson_4.inheritance.model.Animal;
+import org.raul.lesson_4.inheritance.model.Cat;
+import org.raul.lesson_4.inheritance.model.Dog;
 import org.raul.lesson_4.inheritance.utils.Plate;
 
 import java.util.Random;
@@ -41,12 +44,6 @@ class AnimalsApp {
         dogBlaze.run(runningDistance);
         dogTyler.swim(swimmingDistance);
 */
-/*
-        // Display instance creation count for each class
-        System.out.println("Count of cat objects: " + Cat.getInstanceCountCat());
-        System.out.println("Count of dog objects: " + Dog.getInstanceCountDog());
-        System.out.println("Count of all animal objects: " + Animal.getInstanceCountAnimal());
-*/
 
         /* 5.4.Создать массив котов и тарелку с едой, попросить всех
         котов покушать из этой тарелки и потом вывести информацию
@@ -65,6 +62,12 @@ class AnimalsApp {
             System.out.println(cats[i].getName() + " is satiate : " + cats[i].isSatiate());
             System.out.println("==========");
         }
+*/
+/*
+        // Display instance creation count for each class
+        System.out.println("Count of cat objects: " + Cat.getInstanceCountCat());
+        System.out.println("Count of dog objects: " + Dog.getInstanceCountDog());
+        System.out.println("Count of all animal objects: " + Animal.getInstanceCountAnimal());
 */
     }
 }

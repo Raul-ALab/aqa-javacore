@@ -3,12 +3,11 @@ package org.raul.lesson_4.inheritance.model;
 /* 1.Создать классы Собака и Кот с наследованием
 от класса Животное.*/
 public abstract class Animal {
-    private String name;
-    protected int runningThreshold;
-    protected int swimmingThreshold;
-
     /* 4.* Добавить подсчет созданных котов, собак и животных. */
     private static int instanceCountAnimal = 0;
+    protected int runningThreshold;
+    protected int swimmingThreshold;
+    private String name;
 
     public Animal() {
         instanceCountAnimal++;
@@ -39,6 +38,9 @@ public abstract class Animal {
         return swimmingThreshold;
     }
 
+    /* 2.Все животные могут бежать и плыть. В качестве параметра
+    каждому методу передается длина препятствия. Результатом выполнения
+    действия будет печать в консоль. */
     public abstract void swim(int distanceMeters);
 
     public void run(int distanceMeters) {

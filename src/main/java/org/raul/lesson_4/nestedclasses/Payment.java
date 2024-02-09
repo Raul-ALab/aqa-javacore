@@ -1,5 +1,7 @@
 package org.raul.lesson_4.nestedclasses;
 
+/* 6.Создать класс Payment с внутренним классом, с помощью объектов
+которого можно сформировать покупку из нескольких товаров.*/
 public class Payment {
     private float cardAccount;
 
@@ -31,16 +33,8 @@ public class Payment {
             return itemName;
         }
 
-        public void setItemName(String itemName) {
-            this.itemName = itemName;
-        }
-
         public float getItemPrice() {
             return itemPrice;
-        }
-
-        public void setItemPrice(float itemPrice) {
-            this.itemPrice = itemPrice;
         }
     }
 }

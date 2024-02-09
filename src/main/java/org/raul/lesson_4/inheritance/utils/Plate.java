@@ -27,7 +27,7 @@ public class Plate {
             System.out.println("This bowl is empty.");
             return; // Don't proceed further
         }
-        /*  5.1.Сделать так, чтобы в тарелке с едой не могло
+        /* 5.1.Сделать так, чтобы в тарелке с едой не могло
         получиться отрицательного количества еды. */
         if (feed != 0 && (hunger > 0 && hunger <= feed)) {
             feed -= hunger;
