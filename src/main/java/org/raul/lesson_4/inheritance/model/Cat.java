@@ -1,6 +1,6 @@
-package org.raul.lesson_4.model;
+package org.raul.lesson_4.inheritance.model;
 
-import org.raul.lesson_4.utils.Plate;
+import org.raul.lesson_4.inheritance.utils.Plate;
 
 public class Cat extends Animal {
     private static int instanceCountCat = 0;

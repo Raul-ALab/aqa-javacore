@@ -1,4 +1,4 @@
-package org.raul.lesson_4.model;
+package org.raul.lesson_4.inheritance.model;
 
 /* 1.Создать классы Собака и Кот с наследованием
 от класса Животное.*/

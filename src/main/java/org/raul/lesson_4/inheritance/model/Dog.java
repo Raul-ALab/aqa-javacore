@@ -1,4 +1,4 @@
-package org.raul.lesson_4.model;
+package org.raul.lesson_4.inheritance.model;
 
 public class Dog extends Animal {
     private static int instanceCountDog = 0;

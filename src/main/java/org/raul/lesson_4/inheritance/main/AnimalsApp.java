@@ -1,9 +1,6 @@
-package org.raul.lesson_4.main;
+package org.raul.lesson_4.inheritance.main;
 
-import org.raul.lesson_4.model.Animal;
-import org.raul.lesson_4.model.Cat;
-import org.raul.lesson_4.model.Dog;
-import org.raul.lesson_4.utils.Plate;
+import org.raul.lesson_4.inheritance.utils.Plate;
 
 import java.util.Random;
 

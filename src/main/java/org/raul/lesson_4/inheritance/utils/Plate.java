@@ -1,6 +1,4 @@
-package org.raul.lesson_4.utils;
-
-import org.raul.lesson_4.model.Animal;
+package org.raul.lesson_4.inheritance.utils;
 
 import java.util.Random;
 
