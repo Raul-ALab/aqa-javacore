@@ -54,5 +54,12 @@ class DriverClass {
 
         // Transfer apples from one box to another
         appleBox.transferBoxes(appleBox2);
+
+
+/*
+        for (Apple apple : appleBox.getFruitBox()) {
+            System.out.println(apple.getWeight());
+        }
+*/
     }
 }
