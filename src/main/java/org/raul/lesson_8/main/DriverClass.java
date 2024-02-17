@@ -6,10 +6,10 @@ import java.util.List;
 
 class DriverClass {
     public static void main(String[] args) {
-        DuplicatesList strGenerator = new DuplicatesList<>();
 
         /* 1.	Создать массив с набором слов
         (10-20 слов, должны встречаться повторяющиеся).*/
+        DuplicatesList strGenerator = new DuplicatesList<>();
         strGenerator.addElement("Java");
         strGenerator.addElement("C++");
         strGenerator.addElement("Java");
@@ -26,13 +26,12 @@ class DriverClass {
         strGenerator.addElement("Java");
         strGenerator.addElement("Python");
         strGenerator.addElement("Kotlin");
-        strGenerator.addElement("C++");
+        strGenerator.addElement("Java");
 
-        List<String> strList = strGenerator.getDuplicateElements();
-        strGenerator.printAll(strList);
-        strGenerator.countEachElement();
-        strGenerator.retrieveUniqueElements();
-
+//        strGenerator.printAll();
+//        strGenerator.countEachElement();
+//        strGenerator.singletonsOnly();
+//        strGenerator.retrieveUniqueElements(); // updates the list state
 
     }
 }
