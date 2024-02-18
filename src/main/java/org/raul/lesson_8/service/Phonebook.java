@@ -49,7 +49,7 @@ public class Phonebook {
         for (Map.Entry<Phone, Person> entry : contactDetails.entrySet()) {
             String surname = entry.getValue().getSurname();
             String phoneNumber = entry.getKey().getNumber();
-            if (surname.contains(searchKeyword) || phoneNumber.contains(searchKeyword)) {
+            if (surname.toLowerCase().contains(searchKeyword) || phoneNumber.contains(searchKeyword)) {
                 searchCache.put(entry.getKey(), entry.getValue());
             }
         }

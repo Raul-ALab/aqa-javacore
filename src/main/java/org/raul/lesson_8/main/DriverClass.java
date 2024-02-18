@@ -36,7 +36,7 @@ class DriverClass {
 //        strGenerator.singletonsOnly();
 //        strGenerator.retrieveUniqueElements(); // updates the list state
 
-
+        /* 2. Телефонный Справочник */
         Phonebook phonebook = new Phonebook();
         phonebook.add("Statham", "+44-0123-3210-00");
         phonebook.add("Boone", "+1-010101-7331-01");
@@ -45,14 +45,17 @@ class DriverClass {
         phonebook.add("Hart", "+1-030303-3215-04");
         phonebook.add("Boone", "+44-0134-4310-04");
 
+/*
+        System.out.println("All contacts: ");
         for (Map.Entry<Phone, Person> entry : phonebook.getContactDetails().entrySet()) {
             System.out.println(entry.getValue().getSurname() + " " + entry.getKey().getNumber());
         }
+*/
 
-        String searchKeyword = "Sta";
+        String searchKeyword = "sta";
         Map<Phone, Person> searchResult = phonebook.get(searchKeyword);
 
-        if (searchResult != null) {
+        if (searchResult != null && searchKeyword != "") {
             System.out.println("\nSearch result: ");
             for (Map.Entry<Phone, Person> entry : searchResult.entrySet()) {
                 System.out.println(entry.getValue().getSurname() + " : " + entry.getKey().getNumber());
