@@ -1,4 +1,4 @@
-package org.raul.lesson_8.model;
+package org.raul.lesson_8.service;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,10 +14,10 @@ import java.util.*;
 
 @Getter
 @Setter
-public class DuplicatesList<T> {
+public class DuplicateHandler<T> {
     private List<T> duplicateElements;
 
-    public DuplicatesList() {
+    public DuplicateHandler() {
         this.duplicateElements = new ArrayList<>();
     }
 
