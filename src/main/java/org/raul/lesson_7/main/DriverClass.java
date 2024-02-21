@@ -11,13 +11,12 @@ class DriverClass {
         int[] elements = {100, 200, 123, 300, 400, 500};
 
         AppData data = new AppData(header, row, col);
-
         data.setFilePath("src/main/resources/texts/lssn7.csv");
         data.setHeaderTitle("Value");
         data.setDelimiter(';');
         data.setArrElements(elements);
 
         data.save(data);
-
+        data.readFile();
     }
 }
