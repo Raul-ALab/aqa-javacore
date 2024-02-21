@@ -1,31 +1,34 @@
 package org.raul.lesson_7.service;
 
-import lombok.Getter;
 import lombok.Setter;
+import org.raul.lesson_7.util.ArrayBuilder;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
-@Getter
 @Setter
-public class AppData {
+public class AppData extends ArrayBuilder {
     private String[] header;
     private int[][] data;
+    private String filePath;
 
-    public AppData() {
-        header = new String[2];
+    public AppData(int headerSize, int row, int col) {
+        super(headerSize, row, col);
+        header = new String[headerSize];
     }
 
-    public void initializeHeader(String headerText, char delimiter) {
-        for (int i = 0; i < this.header.length; i++) {
-            this.header[i] = headerText + delimiter;
-        }
-    }
+
     public void save(AppData data) {
-        String filePath = "src/main/resources/texts/lssn7.txt";
-        initializeHeader("Value", ';');
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, true))){
+        header = initHeader(getHeaderSize());
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, false))){
             for (int i = 0; i < header.length; i++) {
-                bw.write(header[i]);
+                if (i < header.length - 1) {
+                    bw.write(header[i] + " " + (i + 1) + getDelimiter());
+                } else {
+                    bw.write(header[i] + " " + (i + 1));
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
